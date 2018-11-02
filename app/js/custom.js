@@ -107,5 +107,38 @@ var handler = function(){
 $(window).bind('load', handler);
 $(window).bind('resize', handler);
 
+(function ($) {
+	$(function () {
 
+		$('#filter select').styler();
 
+	});
+})(jQuery);
+
+$(document).ready(function () {
+	var dropdown = $('.filter__link');
+	dropdown.on('click', function () {
+		var dropdownContainer = $(this).siblings('.category__list');
+		dropdownContainer.toggleClass('hide-list');
+		$(this).toggleClass('filter__link_open');
+	});
+});
+
+(function ($) {
+	$(window).on('load', function () {
+		$('.material__list').mCustomScrollbar();
+	});
+})(jQuery);
+
+var swiper = new Swiper('.slider', {
+	slidesPerView: 3,
+	spaceBetween: 30,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	},
+});
