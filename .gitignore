@@ -1,0 +1,7 @@
+/node_modules/
+/.git/
+*.html
+/app/css/
+/**/*.psd
+/**/Thumbs.db
+/**/*.DS_Store
